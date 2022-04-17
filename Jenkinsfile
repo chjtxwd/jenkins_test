@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'cd nginx'
                 sh 'pwd'
                 sh './configure'
                 sh './make'
