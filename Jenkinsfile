@@ -5,8 +5,9 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'cd nginx'
-                sh 'configure'
-                sh 'make'
+                sh 'pwd'
+                sh './configure'
+                sh './make'
             }
         }
         stage('Test') {
