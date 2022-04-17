@@ -11,7 +11,7 @@ pipeline {
             steps {
                 sh 'pwd'
                 sh './configure'
-                sh './make'
+                sh 'make'
             }
         }
         stage('Test') {
