@@ -17,6 +17,8 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
+                sh 'objs/nginx'
+                sh 'curl 127.0.0.1'
             }
         }
         stage('Deploy') {
