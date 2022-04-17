@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                curl http://nginx.org/download/nginx-1.21.6.tar.gz
+                tar -xvf nginx-1.21.6.tar.gz
             }
         }
         stage('Test') {
