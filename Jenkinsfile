@@ -5,7 +5,6 @@ pipeline {
         stage('Pre-Build') {
             steps{
                 sh 'id'
-                sh 'sudo yum -y install pcre-devel openssl openssl-devel'
             }
         }
         stage('Build') {
