@@ -4,8 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                nginx/conconfigure
-                
+                sh 'pwd'
             }
         }
         stage('Test') {
