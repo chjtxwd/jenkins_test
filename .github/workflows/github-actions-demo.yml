@@ -19,10 +19,7 @@ jobs:
         run: echo '::set-output name=SELECTED_COLOR::green'
         id: random-color-generator
       - name: Get color
-        run: echo "The selected color is ${{ steps.random-color-generator.outputs.SELECTED_COLOR }}"
-      - name: Debug echo
         run: |
           filename="MY_FILE.TXT"
-          exit 1 || echo "::error::Filename $filename doesn't match possible files"
-          exit 0 || echo "return 0 "
-
+          echo "::error::Filename $filename doesn't match possible files"
+          exit 1
